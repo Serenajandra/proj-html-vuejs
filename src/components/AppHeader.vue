@@ -19,6 +19,7 @@ export default{
             <nav class="left">
                 <button class="btn_red">order online</button>
                 <ul class="">
+                    <img class="img-in-header-link" src="../assets/svg/svg-0.svg" alt="">
                     <li v-for="(link, index) in store.headerLeftNav" :key="index">
                         <a href="">{{link}}</a>
                     </li>
@@ -35,11 +36,12 @@ export default{
                         <a href="">{{link}}</a>
                     </li>
                 </ul>
-                <ul>                
+                <ul> 
+                    <img class="img-in-header-link" src="../assets/svg/svg-1.svg" alt="">               
                     <li v-for="(link, index) in store.headerRightRightNav" :key="index">
-                        <img src="../assets/svg/svg-1.svg" alt="">
                         <a href="">{{link}}</a>
                     </li>
+                    <img class="img-in-header-link" src="../assets/svg/svg-2.svg" alt="">
                 </ul>
             </nav>
         </header>
@@ -62,13 +64,12 @@ export default{
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 2rem auto;
+            padding-top: 2rem;
             height: 80px;
             width: 100%;
             text-transform: uppercase;
             nav{
-                border: 1px solid springgreen;
-                width: 20%;
+
                 &.left , &.right{
                     width: 45%;
                     display: flex;
@@ -115,5 +116,10 @@ export default{
                 z-index: 1;
             }
         }
-    }   
-</style>
+    }  
+     
+    .img-in-header-link{
+        width: 0.8rem;
+        filter: invert(100%); 
+    }
+    </style>
