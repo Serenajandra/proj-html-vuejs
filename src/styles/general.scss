@@ -17,12 +17,15 @@ html{
 
 // UTILITIES
 
-.d_flex{
+.d-flex{
     display: flex;
 }
 
 li{
     list-style-type: none;
+}
+a{
+    text-decoration: none;
 }
 
 .btn_red{
