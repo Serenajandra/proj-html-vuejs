@@ -8,23 +8,23 @@ name: "AppHeader",
 <template>
 
     <header>
-        <button></button>
+        <button class="btn_red">order online</button>
         <nav class="left">
-            <ul>
+            <ul class="">
                 <li>
-                    <a href=""></a>
+                    <a href="">link</a>
                 </li>
                 <li>
-                    <a href=""></a>
+                    <a href="">link</a>
                 </li>
                 <li>
-                    <a href=""></a>
+                    <a href="">link</a>
                 </li>
             </ul>
         </nav>
         <div>
             <a href="">
-                <img src="" alt="">
+                <img src="../assets/img/h5-logo-divided-header.png" alt="">
             </a>
         </div>
         <nav>
@@ -53,4 +53,30 @@ name: "AppHeader",
 
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+@use "../styles/mixins" as*;
+header{
+    @include flex-center ("horizontal");
+    padding-top: 2rem;
+    height: 80px;
+    width: 100%;
+    nav{
+        border: 1px solid springgreen;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            li{
+                margin: 0 1rem;
+                
+            }
+        }
+    }
+    &>div{
+        width: 6rem;
+        border: 1px solid red;
+        background-color: black;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+}
+</style>

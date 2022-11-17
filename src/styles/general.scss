@@ -1,3 +1,5 @@
+@use "./variabiles" as*;
+
 *{
     box-sizing: border-box;
     margin: 0 auto;
@@ -11,4 +13,21 @@ img{
 html{
     font-size: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+// UTILITIES
+
+.d_flex{
+    display: flex;
+}
+
+li{
+    list-style-type: none;
+}
+
+.btn_red{
+background-color: $red_btn;
+color: white;
+border:none;
+padding: 0.3rem 0.5rem;
 }
