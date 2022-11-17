@@ -1,5 +1,6 @@
 <script>
 import FiftyImgFiftyTextCard from './MainComponents/FiftyImgFiftyTextCard.vue';
+import GoAhead from './MainComponents/GoAhead.vue';
 import TestimonialsSection from './MainComponents/TestimonialsSection.vue';
 
 export default{
@@ -7,6 +8,7 @@ export default{
     components: {
     TestimonialsSection,
     FiftyImgFiftyTextCard,
+    GoAhead,
 }
 }
 </script>
@@ -30,6 +32,8 @@ export default{
     
     <TestimonialsSection />
     <FiftyImgFiftyTextCard />
+    <GoAhead />
+
 
 
     
