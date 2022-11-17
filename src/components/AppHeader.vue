@@ -1,7 +1,14 @@
 
 <script>
+import { store } from "../store";
 export default{
-name: "AppHeader",
+    name: "AppHeader",
+
+    data(){
+        return{
+            store
+        }
+    }
 }
 </script>
 
@@ -12,14 +19,8 @@ name: "AppHeader",
             <nav class="left">
                 <button class="btn_red">order online</button>
                 <ul class="">
-                    <li>
-                        <a href="">link</a>
-                    </li>
-                    <li>
-                        <a href="">link</a>
-                    </li>
-                    <li>
-                        <a href="">link</a>
+                    <li v-for="(link, index) in store.headerLeftNav" :key="index">
+                        <a href="">{{link}}</a>
                     </li>
                 </ul>
             </nav>
@@ -30,24 +31,14 @@ name: "AppHeader",
             </div>
             <nav class="right">
                 <ul>
-                    <li>
-                        <a href="">Link</a>
-                    </li>
-                    <li>
-                        <a href="">Link</a>
-                    </li>
-                    <li>
-                        <a href="">Link</a>
+                    <li v-for="(link, index) in store.headerRightNav" :key="index">
+                        <a href="">{{link}}</a>
                     </li>
                 </ul>
                 <ul>                
-                    <li>
+                    <li v-for="(link, index) in store.headerRightRightNav" :key="index">
                         <img src="../assets/svg/svg-1.svg" alt="">
-                        <a href="">link</a>
-                    </li>
-                    <li>
-                        <img src="../assets/svg/svg-0.svg" alt="">
-                        <a href="">Link</a>
+                        <a href="">{{link}}</a>
                     </li>
                 </ul>
             </nav>
@@ -87,11 +78,14 @@ name: "AppHeader",
                     display: flex;
                     align-items: center;
                     padding: 0;
+
                     li{ 
                         display: flex;
+                        align-items: center;
                         margin: 0 0.3rem;
-                        a,
-                        img{
+                        font-size: 0.6rem;
+                        
+                        a{
                             color: white;
                         }
                     }
