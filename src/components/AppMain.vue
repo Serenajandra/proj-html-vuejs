@@ -7,9 +7,11 @@ import ClientSec from './MainComponents/ClientSec.vue';
 import TestimonialsSection from './MainComponents/TestimonialsSection.vue';
 import PizzaMenu from './MainComponents/PizzaMenu.vue';
 import PizzaDeals from './MainComponents/PizzaDeals.vue';
+import AdvertisingSec from './MainComponents/AdvertisingSec.vue';
 
 export default{
     name: "AppMain",
+
     components: {
     TestimonialsSection,
     GoAhead,
@@ -18,28 +20,20 @@ export default{
     ClientSec,
     PizzaMenu,
     PizzaDeals,
-    BookTable
-}
+    BookTable,
+    AdvertisingSec
+    },
+    data(){
+        return{
+            advertising: ["1.jpg","2.jpg","3.jpg","4.jpg"],
+        }
+    }
+
 }
 </script>
 <template>
-    <section>
-        <div class="container">
-            <div>
-                <img src="../assets/img/h3-img-1.jpg" alt="">
-            </div>
-            <div>
-                <img src="../assets/img/h3-img-2.jpg" alt="">
-            </div>
-            <div>
-                <img src="../assets/img/h3-img-3.jpg" alt="">
-            </div>
-            <div>
-                <img src="../assets/img/h3-img-4.jpg" alt="">
-            </div>
-        </div>
-    </section>
-    
+
+    <AdvertisingSec  v-for="(img, index) in advertising" :key="index" :img="img" />    
     <TestimonialsSection />
     <FiftyImgFiftyTextSec />
     <GoAhead />

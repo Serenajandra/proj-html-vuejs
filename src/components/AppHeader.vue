@@ -3,6 +3,9 @@
 import { store } from "../store";
 export default{
     name: "AppHeader",
+    headerLeftNav: ["home","pages","menu"],
+    headerRightNav:["event","blog","landing"],
+    headerRightRightNav: ["cards","search"],
 
     data(){
         return{
@@ -37,17 +40,27 @@ export default{
                     </li>
                 </ul>
                 <ul> 
-                    <img class="img-in-header-link" src="../assets/svg/svg-1.svg" alt="">               
-                    <li v-for="(link, index) in store.headerRightRightNav" :key="index">
-                        <a href="">{{link}}</a>
+                    <li>
+                        <div class="carts-wrapper">
+                            <p class="counter">0</p>
+                            <img class="img-in-header-link" src="../assets/svg/svg-1.svg" alt="">      
+                        </div>         
+                        <a href="">Carts</a>
                     </li>
-                    <img class="img-in-header-link" src="../assets/svg/svg-2.svg" alt="">
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <a href="">Search</a>
+                    </li>
                 </ul>
             </nav>
         </header>
         <div class="banner-container">
             <img class="bg-banner" src="../assets/img/h3-rev-img-5.png" alt="">
             <img class="pizza-banner" src="../assets/img/h3-rev-img-6.png" alt="">
+        </div>
+        <div class="btn-wrapper">
+            <a class="next">next</a>
+            <a class="prev">prev</a>
         </div>
     </div>
 </template>
@@ -85,8 +98,29 @@ export default{
                         align-items: center;
                         margin: 0 0.3rem;
                         font-size: 0.6rem;
+
+                        .carts-wrapper{
+                            position: relative;
+                            .counter{
+                                width: 1.2em;
+                                border-radius: 50%;
+                                color:$red-light;
+                                background-color: $bg-light;
+                                text-align: center;
+                                font-size: .8em;
+                                padding: 0;
+                                position: absolute;
+                                left: -.3em;
+                                z-index: 1;
+                            }
+                        }
                         
                         a{
+                            color: white;
+                            margin-left: 0.3rem;
+                            margin-right: 0.5rem;
+                        }
+                        .fa-solid{
                             color: white;
                         }
                     }
@@ -101,7 +135,7 @@ export default{
         .banner-container{
             padding-top: 2rem;
             .bg-banner{
-                width: 70%;
+                width: 50%;
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -111,15 +145,42 @@ export default{
                 width: 16rem;
                 position: absolute;
                 left: 50%;
-                top: 60%;
+                top: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 1;
+            }
+        }
+
+        .btn-wrapper{
+            .next , .prev{
+                color: $red-light;
+                background-color: $bg-light;
+                position: absolute;
+                border-radius: 50%;
+                width: 3rem;
+                height: 3rem;
+                text-align: center;
+                text-transform: uppercase;
+                padding-top: 0.5rem;
+                bottom: 40%;
+                transform: translateY(-50%);
+                font-size: 0.6rem;
+                
+
+            }
+            .next{
+                right: -28px;
+                transform: rotate(270deg); 
+            } 
+            .prev{
+                left: -28px;
+                transform: rotate(90deg); 
             }
         }
     }  
      
     .img-in-header-link{
-        width: 0.8rem;
+        width: 1.2rem;
         filter: invert(100%); 
     }
     </style>
