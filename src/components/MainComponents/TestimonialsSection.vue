@@ -27,7 +27,7 @@ export default{
 <style lang="scss" scoped>
 .testimonials{
     background-image: url(../../assets/img/h3-testimonials-bckgrnd.jpg);
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 18rem;
     .card{

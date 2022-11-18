@@ -43,24 +43,22 @@ export default{
             max-height: 100%;
             .text-container{
                 width: 60%;
-                
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
             
                 h3{
-                    font-size: 2rem;
+                    text-transform: uppercase;
                     margin-bottom: 0.5rem;
                 }
                 p{
-                    margin-bottom: 3rem;
+                    margin-bottom: 2rem;
                     color: grey;
                 }
                 h4{
-                    margin-bottom: .8rem;
+                    margin-bottom: .6rem;
                     text-transform: uppercase;
-                    font-size: 1.2rem;
                 
                 }
             

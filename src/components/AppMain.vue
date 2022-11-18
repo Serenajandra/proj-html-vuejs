@@ -25,14 +25,19 @@ export default{
     },
     data(){
         return{
-            advertising: ["1.jpg","2.jpg","3.jpg","4.jpg"],
+            advertising: [
+                "h3-img-1.jpg",
+                "h3-img-2.jpg",
+                "h3-img-3.jpg",
+                "h3-img-4.jpg"
+            ],
         }
     }
 
 }
 </script>
-<template>
 
+<template>
     <AdvertisingSec  v-for="(img, index) in advertising" :key="index" :img="img" />    
     <TestimonialsSection />
     <FiftyImgFiftyTextSec />
@@ -49,12 +54,5 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-.container{
-    width: 100%;
-    display: flex;
 
-    img{
-        padding: 0.4rem 0.2rem;
-    }
-}
 </style>

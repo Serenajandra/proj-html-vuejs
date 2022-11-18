@@ -4,15 +4,30 @@ export default{
     
     props:{
         img: String
-    }    
+    },
+    methods:{
+        getImageUrl(url) {
+            return new URL(url, import.meta.url).href;
+        }
+    }
 }
     </script>
     <template>
         <section>
             <div class="container">
                 <div>
-                    <img src="../assets/img/h3-img-{{img}}" alt="">
+                    <img :src="getImageUrl(`../assets/img/${img}`)" alt="advertising">
                 </div>
             </div>
         </section>
     </template>
+    <style lang="scss" scoped>
+    .container{
+        width: 100%;
+        display: flex;
+    
+        img{
+            padding: 0.4rem 0.2rem;
+        }
+    }
+    </style>

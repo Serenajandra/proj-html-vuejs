@@ -1,6 +1,8 @@
 <script>
     export default{
-        name:"CrewInfo"
+        name:"CrewInfo",
+
+        props: String
     }
 </script>
 <template>
