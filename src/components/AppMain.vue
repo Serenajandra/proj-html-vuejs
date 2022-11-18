@@ -1,5 +1,5 @@
 <script>
-import FiftyImgFiftyTextCard from './MainComponents/FiftyImgFiftyTextCard.vue';
+import FiftyImgFiftyTextSec from './MainComponents/FiftyImgFiftyTextSec.vue';
 import GoAhead from './MainComponents/GoAhead.vue';
 import TestimonialsSection from './MainComponents/TestimonialsSection.vue';
 
@@ -7,8 +7,8 @@ export default{
     name: "AppMain",
     components: {
     TestimonialsSection,
-    FiftyImgFiftyTextCard,
     GoAhead,
+    FiftyImgFiftyTextSec,
 }
 }
 </script>
@@ -31,7 +31,7 @@ export default{
     </section>
     
     <TestimonialsSection />
-    <FiftyImgFiftyTextCard />
+    <FiftyImgFiftyTextSec />
     <GoAhead />
 
 
