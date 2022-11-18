@@ -57,7 +57,7 @@ export default{
     .container{
         width: 100%;
         height: 600px;
-        background-color: rgba(0, 0, 0, 0.947);
+        background-color: $bg-dark;
         position: relative;
     
         header{

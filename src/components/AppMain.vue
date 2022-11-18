@@ -1,4 +1,5 @@
 <script>
+import CrewInfo from './MainComponents/CrewInfo.vue';
 import FiftyImgFiftyTextSec from './MainComponents/FiftyImgFiftyTextSec.vue';
 import GoAhead from './MainComponents/GoAhead.vue';
 import TestimonialsSection from './MainComponents/TestimonialsSection.vue';
@@ -9,6 +10,7 @@ export default{
     TestimonialsSection,
     GoAhead,
     FiftyImgFiftyTextSec,
+    CrewInfo,
 }
 }
 </script>
@@ -33,6 +35,7 @@ export default{
     <TestimonialsSection />
     <FiftyImgFiftyTextSec />
     <GoAhead />
+    <CrewInfo />
 
 
 
