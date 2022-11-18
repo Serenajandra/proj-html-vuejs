@@ -53,7 +53,7 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-    @use "../styles/mixins" as*;
+    @use "../styles/variabiles" as*;
     .container{
         width: 100%;
         height: 600px;

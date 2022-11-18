@@ -1,8 +1,12 @@
 <script>
+import BookTable from './MainComponents/BookTable.vue';
 import CrewInfo from './MainComponents/CrewInfo.vue';
 import FiftyImgFiftyTextSec from './MainComponents/FiftyImgFiftyTextSec.vue';
 import GoAhead from './MainComponents/GoAhead.vue';
+import ClientSec from './MainComponents/ClientSec.vue';
 import TestimonialsSection from './MainComponents/TestimonialsSection.vue';
+import PizzaMenu from './MainComponents/PizzaMenu.vue';
+import PizzaDeals from './MainComponents/PizzaDeals.vue';
 
 export default{
     name: "AppMain",
@@ -11,6 +15,10 @@ export default{
     GoAhead,
     FiftyImgFiftyTextSec,
     CrewInfo,
+    ClientSec,
+    PizzaMenu,
+    PizzaDeals,
+    BookTable
 }
 }
 </script>
@@ -36,6 +44,10 @@ export default{
     <FiftyImgFiftyTextSec />
     <GoAhead />
     <CrewInfo />
+    <ClientSec />
+    <PizzaMenu />
+    <PizzaDeals />
+    <BookTable />
 
 
 

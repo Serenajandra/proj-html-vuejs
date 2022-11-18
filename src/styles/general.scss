@@ -17,15 +17,12 @@ html{
 
 // UTILITIES
 
-.d-flex{
-    display: flex;
+.text-center{
+    text-align: center;
 }
 
-li{
-    list-style-type: none;
-}
-a{
-    text-decoration: none;
+.d-flex{
+    display: flex;
 }
 
 .btn_red{
@@ -34,3 +31,13 @@ color: white;
 border:none;
 padding: 0.3rem 0.5rem;
 }
+
+
+// COMMONS
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
