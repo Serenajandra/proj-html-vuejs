@@ -26,7 +26,28 @@ export default{
     data(){
         return{
             Advertising : ["h3-img-1","h3-img-2","h3-img-3","h3-img-4"],
-            CrewPhoto : ["h1-team-1a","h1-team-2a", "h1-team-3a","h1-team-4a"]
+            CrewPhoto : [
+                {
+                    photo:"h1-team-1a",
+                    name:"Frank Bayley",
+                    role: "kitchen porter",
+                },
+                {
+                    photo:"h1-team-2a",
+                    name:"Frank Bayley",
+                    role: "kitchen porter",
+                },
+                {
+                    photo:"h1-team-3a",
+                    name:"Frank Bayley",
+                    role: "kitchen porter",
+                },
+                {
+                    photo:"h1-team-4a",
+                    name:"Frank Bayley",
+                    role: "kitchen porter",
+                }
+            ]
         }
     }
 
@@ -47,7 +68,7 @@ export default{
     
     <div class="container">
         <div class="row d-flex">
-            <CrewInfo v-for="(photo, index) in CrewPhoto" :key="index" :photo="photo" />
+            <CrewInfo v-for="(photo, index) in CrewPhoto" :key="index" :photo="photo.photo" :name="photo.name" :role="photo.role"/>
         </div>
     </div>
 

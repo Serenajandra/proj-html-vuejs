@@ -47,7 +47,6 @@ position: relative;
         }
     }
 }
-
 .col:hover .hover-eye{
     z-index: 100;
 }
