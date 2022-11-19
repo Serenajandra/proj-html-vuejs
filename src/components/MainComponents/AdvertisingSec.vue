@@ -3,8 +3,9 @@ export default{
     name:"AdvertisingSec",
     
     props:{
-        img: String
+        image: String
     },
+    
     methods:{
         getImageUrl(url) {
             return new URL(url, import.meta.url).href;
@@ -16,7 +17,7 @@ export default{
         <section>
             <div class="container">
                 <div>
-                    <img :src="getImageUrl(`../assets/img/${img}`)" alt="advertising">
+                    <img :src="getImageUrl(`../../assets/img${img}`)" alt="advertising">
                 </div>
             </div>
         </section>

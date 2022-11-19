@@ -25,12 +25,7 @@ export default{
     },
     data(){
         return{
-            advertising: [
-                "h3-img-1.jpg",
-                "h3-img-2.jpg",
-                "h3-img-3.jpg",
-                "h3-img-4.jpg"
-            ],
+            advertising: ["h3-img-1.jpg","h3-img-2.jpg","h3-img-3.jpg","h3-img-4.jpg"]
         }
     }
 
@@ -38,7 +33,7 @@ export default{
 </script>
 
 <template>
-    <AdvertisingSec  v-for="(img, index) in advertising" :key="index" :img="img" />    
+    <AdvertisingSec  v-for="(img, index) in advertising" :key="index" :image="img" />    
     <TestimonialsSection />
     <FiftyImgFiftyTextSec />
     <GoAhead />

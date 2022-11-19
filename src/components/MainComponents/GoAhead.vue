@@ -10,12 +10,16 @@ export default{
         </div>
         <div class="img-bottom"></div>
         <div class="img-central">
-            <div class="prova"></div>
+            <div class="text">
+                <h2>Go ahead and <br> build your <br> own pizza <br> we won't <br> judge!</h2>
+            </div>
         </div>
         
     </section>
 </template>
 <style lang="scss" scoped>
+@use "../../styles/variabiles" as*;
+
     section{
         position: relative;
         width: 100%;
@@ -61,10 +65,14 @@ export default{
             top: 50%;
             left:50%;
             transform: translate(-50%,-50%);
-            .prova{
-                border: 1px solid red;
-                width:30%;
-                height:30%;
+            .text{
+                position: absolute;
+                left:6rem;
+                top: -1rem;
+                width:35%;
+                color: $light;
+                text-transform: uppercase;
+                font-size: 1.5rem;
             }
         }
     }    
