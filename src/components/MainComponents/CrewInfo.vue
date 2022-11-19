@@ -2,27 +2,23 @@
     export default{
         name:"CrewInfo",
 
-        props: String
+        props:{
+            photo: String
+        },
+        methods:{
+        getImageUrl(url) {
+            return new URL(url, import.meta.url).href;
+        }
+    }
     }
 </script>
 <template>
 
-    <div class="container">
-        <div class="row d-flex">
-            <div class="col"><img src="../../assets/img/h1-team-2a.jpg" alt=""></div>
-            <div class="col"></div>
-            <div class="col"><img src="../../assets/img/h1-team-2a.jpg" alt=""></div>
-            <div class="col"></div>
-            <div class="col"><img src="../../assets/img/h1-team-2a.jpg" alt=""></div>
-            <div class="col"></div>
-            <div class="col"><img src="../../assets/img/h1-team-2a.jpg" alt=""></div>
-            <div class="col"></div>
-        </div>
+    <div class="col">
+        <img :src="getImageUrl(`../../assets/img/${photo}.jpg`)" alt="">
     </div>
-
+       
 </template>
 <style lang="scss" scoped>
-.container{
-    padding: 0.5rem 0;
-}
+
 </style>

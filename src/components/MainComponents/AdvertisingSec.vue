@@ -17,7 +17,7 @@ export default{
         <section>
             <div class="container">
                 <div>
-                    <img :src="getImageUrl(`../../assets/img${img}`)" alt="advertising">
+                    <img :src="getImageUrl(`../../assets/img${img}.jpg`)" alt="advertising">
                 </div>
             </div>
         </section>

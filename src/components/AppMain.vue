@@ -25,7 +25,8 @@ export default{
     },
     data(){
         return{
-            advertising: ["h3-img-1.jpg","h3-img-2.jpg","h3-img-3.jpg","h3-img-4.jpg"]
+            advertising : ["h3-img-1","h3-img-2","h3-img-3","h3-img-4"],
+            CrewPhoto : ["h1-team-1a","h1-team-2a", "h1-team-3a","h1-team-4a"]
         }
     }
 
@@ -37,7 +38,14 @@ export default{
     <TestimonialsSection />
     <FiftyImgFiftyTextSec />
     <GoAhead />
-    <CrewInfo />
+    
+    <div class="container">
+        <div class="row d-flex">
+            <CrewInfo v-for="(photo, index) in CrewPhoto" :key="index" :photo="photo" />
+        </div>
+    </div>
+
+   
     <ClientSec />
     <PizzaMenu />
     <PizzaDeals />
@@ -50,4 +58,14 @@ export default{
 
 <style lang="scss" scoped>
 
+.container{
+    width: 100%;
+    padding: 0.5rem 0;
+    .row{
+        width: 100%;
+        .col{
+            width: calc(100% / 4);
+        }
+    }
+}
 </style>
