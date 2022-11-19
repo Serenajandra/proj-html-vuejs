@@ -25,7 +25,7 @@ export default{
     },
     data(){
         return{
-            advertising : ["h3-img-1","h3-img-2","h3-img-3","h3-img-4"],
+            Advertising : ["h3-img-1","h3-img-2","h3-img-3","h3-img-4"],
             CrewPhoto : ["h1-team-1a","h1-team-2a", "h1-team-3a","h1-team-4a"]
         }
     }
@@ -34,7 +34,13 @@ export default{
 </script>
 
 <template>
-    <AdvertisingSec  v-for="(img, index) in advertising" :key="index" :image="img" />    
+   
+    <div class="container">
+        <div class="row d-flex">
+         <AdvertisingSec  v-for="(img, index) in Advertising" :key="index" :image="img" />    
+        </div>
+    </div>
+
     <TestimonialsSection />
     <FiftyImgFiftyTextSec />
     <GoAhead />
@@ -63,9 +69,6 @@ export default{
     padding: 0.5rem 0;
     .row{
         width: 100%;
-        .col{
-            width: calc(100% / 4);
-        }
     }
 }
 </style>

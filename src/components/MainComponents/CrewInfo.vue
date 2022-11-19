@@ -15,7 +15,7 @@
 <template>
 
     <div class="col">
-        <img :src="getImageUrl(`../../assets/img/${photo}.jpg`)" alt="">
+        <img :src="getImageUrl(`../../assets/img/${photo}.jpg`)" alt="crewPhoto">
     </div>
        
 </template>

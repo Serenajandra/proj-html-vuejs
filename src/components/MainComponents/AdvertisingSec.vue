@@ -12,23 +12,43 @@ export default{
         }
     }
 }
-    </script>
-    <template>
-        <section>
-            <div class="container">
-                <div>
-                    <img :src="getImageUrl(`../../assets/img${img}.jpg`)" alt="advertising">
-                </div>
+</script>
+<template>
+    <div class="col">
+        <img :src="getImageUrl(`../../assets/img/${image}.jpg`)" alt="advertising">
+        <div class="wrapper">
+            <div class="hover-eye">
+                <i class="fa-solid fa-eye fa-3x"></i>
             </div>
-        </section>
-    </template>
-    <style lang="scss" scoped>
-    .container{
-        width: 100%;
-        display: flex;
-    
-        img{
-            padding: 0.4rem 0.2rem;
+        </div>
+    </div> 
+</template>
+<style lang="scss" scoped>
+    @use "../../styles/variabiles" as*;
+.col{
+width: calc(100% / 4);
+position: relative;
+    img{
+        padding: 0.4rem 0.2rem;
+        position: absolute;
+    }
+    .hover-eye{
+        z-index: -1;
+        height: 16rem;
+        position: relative;
+        background-color: $light;
+        
+        .fa-solid{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            color: red;
         }
     }
-    </style>
+}
+
+.col:hover .hover-eye{
+    z-index: 100;
+}
+ </style>
