@@ -1,35 +1,22 @@
 <script>
 export default{
-    name: "ClientSec"
+    name: "ClientSec",
+    props: {
+        logo: String
+    },
+    methods:{
+        getImageUrl(url) {
+            return new URL(url, import.meta.url).href;
+        }
+    }
 }
 </script>
 <template>
-    <div class="container">
-        <ul class="d-flex">
-            <li>
-            <img src="../../assets/img/h1-clients-img-1.png" alt="">
-            </li>
-            <li>
-                <img src="../../assets/img/h1-clients-img-1.png" alt="">
-            </li>
-            <li>
-                <img src="../../assets/img/h1-clients-img-1.png" alt="">
-            </li>
-            <li>
-                <img src="../../assets/img/h1-clients-img-1.png" alt="">
-            </li>
-            <li>
-                <img src="../../assets/img/h1-clients-img-1.png" alt="">
-            </li>
-
-        </ul>
-    </div>
+    <li>
+        <img :src="getImageUrl(`../../assets/img/${logo}.png`)" alt="logo">
+    </li>
 </template>
 <style lang="scss" scoped>
-    ul{
-        justify-content: space-around;
-        li{
-            width: 10rem;
-        }
-    }
+    
+   
 </style>

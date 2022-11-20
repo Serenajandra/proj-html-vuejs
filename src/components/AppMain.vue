@@ -29,25 +29,26 @@ export default{
             CrewPhoto : [
                 {
                     photo:"h1-team-1a",
-                    name:"Frank Bayley",
-                    role: "kitchen porter",
+                    name:"John Snow",
+                    role: "Barman",
                 },
                 {
                     photo:"h1-team-2a",
-                    name:"Frank Bayley",
-                    role: "kitchen porter",
+                    name:"Jessica Bunner",
+                    role: "waitress",
                 },
                 {
                     photo:"h1-team-3a",
-                    name:"Frank Bayley",
-                    role: "kitchen porter",
+                    name:"Sandy Day",
+                    role: "disk jockey",
                 },
                 {
                     photo:"h1-team-4a",
                     name:"Frank Bayley",
                     role: "kitchen porter",
                 }
-            ]
+            ],
+            ClientsLogos : ["h1-clients-img-1","h1-clients-img-2","h1-clients-img-3","h1-clients-img-4","h1-clients-img-5"]
         }
     }
 
@@ -72,8 +73,14 @@ export default{
         </div>
     </div>
 
+   <section>
+    <div class="container">
+        <ul class="clientLogoList" >
+                <ClientSec  v-for="(clientLogo, index) in ClientsLogos" :key="index" :logo="clientLogo" /> 
+        </ul>
+    </div>
+   </section>
    
-    <ClientSec />
     <PizzaMenu />
     <PizzaDeals />
     <BookTable />
@@ -90,6 +97,11 @@ export default{
     padding: 0.5rem 0;
     .row{
         width: 100%;
+    }
+    .clientLogoList{
+        display: flex;
+        justify-content: center;
+        width: 70%;
     }
 }
 </style>

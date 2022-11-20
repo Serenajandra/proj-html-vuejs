@@ -27,6 +27,10 @@ html{
     display: flex;
 }
 
+.justify-center{
+justify-content: center;
+}
+
 .btn_red{
 background-color: $red_btn;
 color: white;
