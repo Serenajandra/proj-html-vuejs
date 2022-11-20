@@ -13,7 +13,9 @@ export default{
 </script>
 <template>
     <li>
-        <img :src="getImageUrl(`../../assets/img/${logo}.png`)" alt="logo">
+        <a href="">
+            <img :src="getImageUrl(`../../assets/img/${logo}.png`)" alt="logo">
+        </a>
     </li>
 </template>
 <style lang="scss" scoped>

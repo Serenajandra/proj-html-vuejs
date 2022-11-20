@@ -31,6 +31,10 @@ html{
 justify-content: center;
 }
 
+.overflow-hidden{
+    overflow: hidden;
+}
+
 .btn_red{
 background-color: $red_btn;
 color: white;

@@ -1,61 +1,58 @@
 <script>
 export default{
-    name:"PizzaDeals"
+    name:"PizzaDeals",
+    props: {
+        day: String,
+        month: String,
+        event: String,
+        address: String
+    }
 }
 </script>
 
 <template>
-    <section>
-        <div class="text-container text-part text-center">
-                <h6>Made with love</h6>
-                <h3>Delish pizza deals</h3>
 
-                <div class="deals d-flex">
-                    <h4 class="date">02 Nov</h4>
-                    <div>
-                        <h4>Traditional neapolitan pies in kyoto pizza mercato</h4>
-                        <p>204 E. Piazzetta Tommaso</p>
-                    </div>
-                </div>
+    <div class="deals d-flex">
+        <div>
+            <h3 class="day">{{day}}</h3>
+            <h4 class="month">{{month}}</h4>
         </div>
-        <div class="img-part">
-            <img src="../../assets/img/h3-img-5a.jpg" alt="">
+        
+        <div>
+            <h4>{{event}}</h4>
+            <p> <span><i class="fa-solid fa-location-dot"></i></span> {{address}}</p>
         </div>
-    </section>
+    </div>
+       
 </template>
 <style lang="scss" scoped>
-section{
-    display: flex;
-    width: 100%;
-    padding-bottom: 0.3rem;
-    .img-part{
-        width: 50%;
-    }
-    .text-part{
-        
-        width: 50%;
-        max-height: 100%;
-        
-        h3{
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        p{
-            margin-bottom: 3rem;
-            color: grey;
-        }
-        h4{
-            margin-bottom: .8rem;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-        
-        }
+    @use "../../styles/variabiles" as*;
 
-        .date{
-            color: red;
-            margin-right: 1rem;
-            font-size: 1.2rem;
-        }    
+    .deals{
+        align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px dashed $gold;
     }
-}
+    h6{
+        color: $red-light;
+        text-transform: uppercase;
+    }
+    p{
+        color:$red-light;
+        margin-top: 0.5rem;
+    }
+    h4{
+        text-transform: uppercase;
+    }
+    .day{
+        color: red;
+        text-align: center;
+        margin: 0 1rem;
+        font-size: 3rem;
+    }
+    .month{
+        margin: 0 1rem;
+        text-align: center;
+    }    
+
 </style>
