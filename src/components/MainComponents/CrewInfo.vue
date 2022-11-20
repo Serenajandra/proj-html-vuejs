@@ -39,18 +39,20 @@
     .col{
         width: calc(100% / 4);
         position: relative;
+        max-height: 56vh;
         .wrapper{
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
             width: 100%;
+            height: 99%;
             background-color: $light;
             border: .5px solid $red-light;
             
             .hover{
-                margin:1rem;
-                height: 20.9rem;
+                margin:1vh;
+                height: 95%;
                 position: relative;
                 background-color: $red-light;
 
