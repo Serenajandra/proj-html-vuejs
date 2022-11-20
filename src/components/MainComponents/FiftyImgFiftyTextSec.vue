@@ -12,7 +12,7 @@ export default{
 <template>
     <section class="d-flex">
         <div class="img-part">
-            <img src="../../components/../assets/img/h1-img-4.jpg" alt="">
+            <img src="../../assets/img/h1-img-7n.png" alt="">
         </div>
         <div class="text-part">
             <div class="text-container">
@@ -36,6 +36,17 @@ export default{
         padding-bottom: 0.3rem;
         .img-part{
             width: 50%;
+            height: 70vh;
+            background-image: url(../../assets/img/h1-img-4.jpg);
+            background-size: contain;
+            position: relative;
+            img{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 30%;
+            }
         }
         .text-part{
             position: relative;

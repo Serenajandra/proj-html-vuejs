@@ -107,68 +107,85 @@ export default{
 </script>
 
 <template>
-   
-    <div class="container">
-        <div class="row d-flex">
-         <AdvertisingSec  v-for="(img, index) in Advertising" :key="index" :image="img" />    
+        <div>
+        <div class="fixed-icon">
+            <img src="../assets/svg/svg-4.svg" alt="">
         </div>
-    </div>
+        <section>
+            <div class="container">
+                <div class="row d-flex">
+                 <AdvertisingSec  v-for="(img, index) in Advertising" :key="index" :image="img" />    
+                </div>
+            </div>
+        </section>
 
-    <TestimonialsSection />
-    <FiftyImgFiftyTextSec />
-    <GoAhead />
-    <section>
-        <div class="container">
-            <div class="row d-flex">
-                <CrewInfo v-for="(photo, index) in CrewPhoto" :key="index" :photo="photo.photo" :name="photo.name" :role="photo.role"/>
-            </div>
-        </div>
-    </section>
+        <TestimonialsSection />
+        <FiftyImgFiftyTextSec />
+        <GoAhead />
+        <section>
+            <div class="container">
+                <div class="row d-flex">
+                    <CrewInfo v-for="(photo, index) in CrewPhoto" :key="index" :photo="photo.photo" :name="photo.name" :role="photo.role"/>
+                </div>
+             </div>
+        </section>
 
-   <section>
-    <div class="container">
-        <ul class="clientLogoList" >
-            <ClientSec  v-for="(clientLogo, index) in ClientsLogos" :key="index" :logo="clientLogo" /> 
-        </ul>
-    </div>
-   </section>
+        <section>
+            <div class="container">
+                <ul class="clientLogoList" >
+                    <ClientSec  v-for="(clientLogo, index) in ClientsLogos" :key="index" :logo="clientLogo" /> 
+                </ul>
+            </div>
+        </section>
 
-   <section>
-        <div class="pizzas-container overflow-hidden">
-            <div class="text-part text-center">
-                <h6>Choose your flavor</h6>
-                <h2>The best pizza menu in town</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus repellendus blanditiis dignissimos dolorum, nisi aut? Consequuntur laboriosam</p>
+        <section>
+             <div class="pizzas-container overflow-hidden">
+                 <div class="text-part text-center">
+                     <h6>Choose your flavor</h6>
+                     <h2>The best pizza menu in town</h2>
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus repellendus blanditiis dignissimos dolorum, nisi aut? Consequuntur laboriosam</p>
+                 </div>
+                 <div class="pizzas-list d-flex text-center">
+                     <PizzaMenu v-for="(pizza, index) in PizzasMenu" :key="index" :image="pizza.image" :name="pizza.name" :price="pizza.price" />
+                 </div>
+             </div>
+        </section>
+
+        <section class="pizza-deals">
+            <div class="pizza-deals-text">
+                <div class="text-container">
+                    <h6>Made with love</h6>
+                    <h3 class="title">Delish pizza deals</h3>
+                    <PizzaDeals v-for="(deal, index) in Deals" :key="index" :day="deal.day" :month="deal.month" :event="deal.event" :address="deal.address" />  
+                </div>
             </div>
-            <div class="pizzas-list d-flex text-center">
-                <PizzaMenu v-for="(pizza, index) in PizzasMenu" :key="index" :image="pizza.image" :name="pizza.name" :price="pizza.price" />
+            <div class="img-part">
+                <img src="../assets/img/h3-img-5a.jpg" alt="">
             </div>
-        </div>
-    </section>
-    
-    <section class="pizza-deals">
-        <div class="pizza-deals-text">
-            <div class="text-container">
-                <h6>Made with love</h6>
-                <h3 class="title">Delish pizza deals</h3>
-                <PizzaDeals v-for="(deal, index) in Deals" :key="index" :day="deal.day" :month="deal.month" :event="deal.event" :address="deal.address" />  
-            </div>
-        </div>
-        <div class="img-part">
-            <img src="../assets/img/h3-img-5a.jpg" alt="">
-        </div>
-    </section>
+        </section>
  
+        <section>
+            <BookTable />
+        </section>
     
-    <BookTable />
-
-
-
+    
+    </div>
     
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/variabiles" as*;
+
+.fixed-icon{
+    right: 1rem;
+    bottom: 50%;
+    z-index: 999;
+    position: fixed;
+    background-color: $light;
+    border-radius: 50%;
+    padding: 0.25rem 0.5rem;
+ 
+}
 
 .container{
     width: 100%;
