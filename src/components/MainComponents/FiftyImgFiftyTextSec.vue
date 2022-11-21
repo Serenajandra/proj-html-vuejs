@@ -38,7 +38,7 @@ export default{
             width: 50%;
             height: 70vh;
             background-image: url(../../assets/img/h1-img-4.jpg);
-            background-size: contain;
+            background-size: cover;
             position: relative;
             img{
                 position: absolute;

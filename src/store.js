@@ -16,6 +16,28 @@ export const store = reactive({
             price: "$30",
             name: "combo grande",
         },
+    ],
+    RestaurantsAddress: [
+        {
+            address: "164 E. Bell Rd #104.",
+            city: "Salerno, AZ 85022",
+            tel: "(602) 867-1010"
+        },
+        {
+            address: "204 E. Piazzetta Tommaso",
+            city: "Sorrento, AZ 85022",
+            tel: "(358) 867-1010"
+        },
+        {
+            address: "Viale Puglia 54",
+            city: "Torre Del Greco, AZ 85022",
+            tel: "(359) 867-1010"
+        },
+        {
+            address: "Corso Itali AA",
+            city: "Naples, AZ 85022",
+            tel: "(989) 867-1010"
+        },
     ]
     
 })
