@@ -1,18 +1,61 @@
 <script>
+
 export default{
-    name: "JumbotronSec"
+    name: "JumbotronSec",
+    data(){
+        return{
+            jumboImages : [    
+                {
+                    pizza: `../../assets/img/h3-rev-img-6.png`,
+                    bgText: `../../assets/img/h3-rev-img-5.png`,
+                },
+                {
+                    pizza: "../../assets/img/h3-rev-img-2.png",
+                    bgText: "../../assets/img/h3-rev-img-1.png",
+                },
+                {
+                    pizza: "../../assets/img/h3-rev-img-4.png",
+                    bgText: "../../assets/img/h3-rev-img-3.png",
+                }
+            ],
+            activeImage: 0,
+        }
+    },
+    methods:{
+        getImageUrl(url) {
+            return new URL(url, import.meta.url).href;
+        },
+
+
+        showNext(){
+            if (this.activeImage < this.jumboImages.length -1) {
+                this.activeImage++;                
+            }else{
+                this.activeImage = 0;
+            }
+        },
+        ShowPrev(){
+            if (this.activeImage > 0) {
+                this.activeImage--;
+            }else{
+                this.activeImage = this.jumboImages.length -1;
+            }
+        }
+    }
 }
 </script>
 
 <template>
+
+
     <div class="container">
         <div class="banner-container">
-            <img class="bg-banner" src="../../assets/img/h3-rev-img-5.png" alt="">
-            <img class="pizza-banner" src="../../assets/img/h3-rev-img-6.png" alt="">
+            <img class="bg-banner" :src="getImageUrl(`${jumboImages[activeImage].bgText}`)" alt="">
+            <img class="pizza-banner" :src="getImageUrl(`${jumboImages[activeImage].pizza}`)" alt="">
         </div>
         <div class="btn-wrapper">
-            <a class="next">next</a>
-            <a class="prev">prev</a>
+            <a class="next" @click="showNext()">next</a>
+            <a class="prev" @click="ShowPrev()">prev</a>
         </div>
     </div>
 </template>

@@ -38,6 +38,8 @@ export const store = reactive({
             city: "Naples, AZ 85022",
             tel: "(989) 867-1010"
         },
-    ]
+    ],
+
+
     
 })
