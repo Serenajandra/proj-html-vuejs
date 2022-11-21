@@ -1,4 +1,5 @@
 <script>
+import JumbotronSec from './MainComponents/JumbotronSec.vue';
 import BookTable from './MainComponents/BookTable.vue';
 import CrewInfo from './MainComponents/CrewInfo.vue';
 import FiftyImgFiftyTextSec from './MainComponents/FiftyImgFiftyTextSec.vue';
@@ -21,7 +22,8 @@ export default{
     PizzaMenu,
     PizzaDeals,
     BookTable,
-    AdvertisingSec
+    AdvertisingSec,
+    JumbotronSec,
     },
     data(){
         return{
@@ -107,7 +109,11 @@ export default{
 </script>
 
 <template>
-        <div>
+
+    <div>
+        <section class="jumbotron">
+            <JumbotronSec />
+        </section>
         <div class="fixed-icon">
             <img src="../assets/svg/svg-4.svg" alt="">
         </div>
@@ -161,6 +167,18 @@ export default{
             </div>
             <div class="img-part">
                 <img src="../assets/img/h3-img-5a.jpg" alt="">
+            </div>
+            <div class="cart-logo-container">
+                <div class="circle-logo">
+                    <a href="">
+                        <img src="../assets/svg/svg-7.svg" alt="">
+                    </a>
+                </div>
+                <div class="cart-logo">
+                    <a href="">
+                        <img src="../assets/svg/svg-9.svg" alt="">
+                    </a>
+                </div>
             </div>
         </section>
  
@@ -233,6 +251,7 @@ export default{
     display: flex;
     width: 100%;
     padding-bottom: 0.3rem;
+    position: relative;
     .img-part{
         width: 50%;
     }
@@ -255,7 +274,23 @@ export default{
         padding-bottom: 1rem;
         font-size: 2rem;
         text-transform: uppercase;
-
+    }
+    .cart-logo-container{
+        position: absolute;
+            right: 1rem;
+            top: -2rem;
+            background-color: $light;
+        .circle-logo{
+            margin-bottom: 0.2rem;
+            background-color: $red-light;
+        }
+        .cart-logo , .circle-logo{
+            width: 2rem;
+            height: 2rem;
+            padding: 0.5rem; 
+                       
+        }
     }
 }
+
 </style>
