@@ -25,7 +25,8 @@ export default{
 <style lang="scss" scoped>
 @use "../../styles/variabiles" as*;
 .card{
-    padding: 0 50px;
+    margin: 3rem;
+    padding: auto;
     
     img{
         width: 400px !important;

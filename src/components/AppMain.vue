@@ -161,7 +161,7 @@ export default{
                      <h2>The best pizza menu in town</h2>
                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus repellendus blanditiis dignissimos dolorum, nisi aut? Consequuntur laboriosam</p>
                  </div>
-                 <div class="pizzas-list d-flex text-center">
+                 <div class="pizzas-list text-center">
                      <PizzaMenu v-for="(pizza, index) in PizzasMenu" :key="index" :image="pizza.image" :name="pizza.name" :price="pizza.price" />
                  </div>
              </div>
@@ -232,8 +232,12 @@ export default{
         .pizzas-container{
             width: 100%;
             .pizzas-list{
-                padding: 4rem 0;
-                width: 1250px; 
+                display: flex;
+                justify-content: space-around;
+                padding: 3rem 0;
+                width: 1500px;
+                position: relative;
+                left: -5rem;
             
             }
             .text-part{
