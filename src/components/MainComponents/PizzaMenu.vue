@@ -5,6 +5,7 @@ export default{
         image: String,
         name: String,
         price: String,
+        untilSalePrice: String,
         sold: Boolean 
     },
     methods:{
@@ -19,7 +20,7 @@ export default{
         <a href="">
             <img :src="getImageUrl(`../../assets/img/h3-product-img-${image}.png`)" alt="">
             <p class="name">{{name}}</p>
-            <p class="price">{{price}}</p>
+            <p class="price"><span class="old-price">{{untilSalePrice}} </span>{{price}}</p>
             <div class="sold" :class="sold === true ? `active` : `` ">
                 <p>sold</p>
             </div>
@@ -42,6 +43,10 @@ export default{
     }
     .price{
         color: $red-light;
+        .old-price{
+            color: $grey;
+            text-decoration: line-through;
+        }
     }
     .sold{
         border-radius: 50%;

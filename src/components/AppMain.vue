@@ -56,35 +56,41 @@ export default{
                     image: "1a-100x100",
                     name: "Bismark",
                     price:"$30.00",
+                    untilSalePrice: "$55.00",
                     sold: false
                 },
                 {
                     image: "2a-150x150",
                     name: "Fior di zucca",
                     price:"$17.00 - $50.00",
+                    untilSalePrice: "",
                     sold: false
                 },
                 {
                     image: "3a-150x150",
                     name: "Valdostana",
-                    price:"$55.00 - $30.00",
+                    price:"$30.00",
+                    untilSalePrice: "",
                     sold: true
                 },
                 {
                     image: "4a-150x150",
                     name: "Pizza tartufata",
                     price:"$45.00",
+                    untilSalePrice: "",
                     sold: false
                 }, {
                     image: "5a-150x150",
                     name: "Francescana",
                     price:"$25.00",
+                    untilSalePrice: "",
                     sold: false
                 },
                 {
                     image: "6a-100x100",
                     name: "Campagnola",
                     price:"$50.00 - $95.00",
+                    untilSalePrice: "",
                     sold: false
                 }
             ],
@@ -168,7 +174,7 @@ export default{
                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus repellendus blanditiis dignissimos dolorum, nisi aut? Consequuntur laboriosam</p>
                  </div>
                  <div class="pizzas-list text-center">
-                     <PizzaMenu v-for="(pizza, index) in PizzasMenu" :key="index" :image="pizza.image" :name="pizza.name" :price="pizza.price" :sold="pizza.sold" />
+                     <PizzaMenu v-for="(pizza, index) in PizzasMenu" :key="index" :image="pizza.image" :name="pizza.name" :price="pizza.price" :sold="pizza.sold" :untilSalePrice="pizza.untilSalePrice"/>
                  </div>
              </div>
         </section>
