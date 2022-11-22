@@ -3,12 +3,42 @@ import { store } from "../../store";
 
 export default{
     name: "TestimonialsSection",
-    date(){
+    data(){
         return{
-            store,
+            testimonials: [
+                {
+                    text:"Forget the trandy pizza shops, this hidden spot makes the best newyork-style pizza slice in Naples.",
+                    author: "Washington Post 2018"
+                },
+                {
+                    text: "Friendliness, dedication and competence are the hallmarks of all staff. An excellent pizza to eat with friends to live an experience not only culinary but able to involve all our senses.",
+                    author: "The Sunday 2019"
+                },
+                {
+                    text: "An extraordinary dive into the 50s, where cuisine and style come together in a unique experience that will leave you dreamy and a little nostalgic.",
+                    author: "The New York Times 2020"
+                }
+            ],
+            review: 0
+        }
+    },
+    methods: {
+        showNext(){
+            if (this.review < this.testimonials.length - 1) {
+                this.review++;
+            }else{
+                this.review = 0;
+            }
+        },
+
+        showPrev(){
+            if (this.review > 0) {
+                this.review--;                
+            }else{
+                this.review = this.testimonials.length - 1;
+            }
         }
     }
-
 }
 </script>
 <template>
@@ -16,13 +46,13 @@ export default{
         <div class="testimonials">
             <div class="card">
                 <i class="fa-solid fa-quote-left fa-4x"></i>
-                <h3>"Forget the trandy pizza shops, this hidden spot makes the best newyork-style pizza slice in Naples"</h3>
-                <p>Washington Post 2018</p>
+                <h3>{{testimonials[review].text}}</h3>
+                <p>{{testimonials[review].author}}</p>
             </div>
         </div>
         <div class="btn-wrapper">
-            <a class="next">next</a>
-            <a class="prev">prev</a>
+            <a class="next" @click="showNext()" >next</a>
+            <a class="prev" @click="showPrev()" >prev</a>
         </div>
     </div>
 </template>
