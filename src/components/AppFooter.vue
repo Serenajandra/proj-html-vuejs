@@ -14,6 +14,7 @@ export default{
     <Footer class="d-flex">
         <div class="text-part">
             <div class="row">
+                
                 <div class="col">
                     <h4>Find our restaurants</h4>
                     <ul class="restaurans-address">
@@ -22,11 +23,9 @@ export default{
                             <p>{{restaurant.city}}</p>
                             <p>{{restaurant.tel}}</p> 
                         </li>
-                        <!-- <li>164 E. Bell Rd #104.  (602) 867-1010</li>
-                        <li>164 E. Bell Rd #104. Salerno, AZ 85022 (602) 867-1010</li>
-                        <li>164 E. Bell Rd #104. Salerno, AZ 85022 (602) 867-1010</li> -->
                     </ul>
                 </div>
+
                 <div class="col">
                     <h4>Working hours</h4>
                     <ul>
@@ -49,14 +48,23 @@ export default{
                     </ul>
                     <div class="d-flex">
                         <h5>Follow us:</h5>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin-in"></i>
+                        <a href="">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
+
                 <div class="col">
-                    <h3>the don peppe crew first and foremost values an authentic, well baked slice of pizza.</h3>
+                    <h3 class="footer-big-text">the don peppe crew first and foremost values an authentic, well baked slice of pizza.</h3>
                 </div>
             </div>
         </div>
@@ -71,7 +79,7 @@ export default{
 
 footer{
     width: 100%;
-    background-color:$bg-dark;
+    background-color: $bg-dark;
     color: $light;
 
     .text-part{
@@ -82,8 +90,6 @@ footer{
             display: flex;
             padding-top: 4rem;
             padding-left: 3rem;
-        
-            
             .col{
                 width: calc(100% / 3);
                 h3{
@@ -99,12 +105,12 @@ footer{
                     li{
                         line-height: 1.3rem;
                         margin: 1rem 0;
-                        color:$grey;
+                        color: $grey;
                     }
                 }
             }
         }
-        h3{
+        .footer-big-text{
             text-transform: uppercase;
         }
     }
@@ -113,7 +119,7 @@ footer{
     }
     h5{
         text-transform: uppercase;
-        color:$dark-gold;
+        color: $dark-gold;
         span{
             color: $red-light;
         }
@@ -121,6 +127,7 @@ footer{
     i{
         padding: 0.2rem;
         font-size: 0.6rem;
+        color: $light;
     }
     .closed-kitchen{
         color: $red-light;

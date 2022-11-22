@@ -236,8 +236,7 @@ export default{
                 justify-content: space-around;
                 padding: 3rem 0;
                 width: 1500px;
-                position: relative;
-                left: -5rem;
+
             
             }
             .text-part{
