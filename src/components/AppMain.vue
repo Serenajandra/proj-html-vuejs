@@ -135,7 +135,9 @@ export default{
         </section>
 
         <div class="fixed-icon">
-            <img src="../assets/svg/svg-4.svg" alt="">
+            <a href="">
+                <img src="../assets/svg/svg-4.svg" alt="">
+            </a>
         </div>
         
         <section>
