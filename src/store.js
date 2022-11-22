@@ -39,6 +39,14 @@ export const store = reactive({
             tel: "(989) 867-1010"
         },
     ],
+    myCart: [],
+    newCArt:{
+        image: "",
+        name: "",
+        price:"",
+        untilSalePrice: "",
+        sold: false
+    }
 
 
     

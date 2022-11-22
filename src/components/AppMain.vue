@@ -1,4 +1,5 @@
 <script>
+import { store } from "../store";
 import JumbotronSec from './MainComponents/JumbotronSec.vue';
 import BookTable from './MainComponents/BookTable.vue';
 import CrewInfo from './MainComponents/CrewInfo.vue';
@@ -24,9 +25,10 @@ export default{
     AdvertisingSec,
     JumbotronSec,
     SpecialsSec
-},
+    },
     data(){
         return{
+            store,
             Advertising : ["h3-img-1","h3-img-2","h3-img-3","h3-img-4"],
             CrewPhoto : [
                 {
@@ -115,6 +117,12 @@ export default{
                 }
             ]
         }
+    },
+    methods: {
+        addToCart(){
+            store.newCArt.push(pizza);
+
+        }
     }
 
 }
@@ -184,7 +192,7 @@ export default{
                 <div class="text-container">
                     <h6>Made with love</h6>
                     <h3 class="title">Delish pizza deals</h3>
-                    <PizzaDeals v-for="(deal, index) in Deals" :key="index" :day="deal.day" :month="deal.month" :event="deal.event" :address="deal.address" />  
+                    <PizzaDeals v-for="(deal, index) in Deals" :key="index" :day="deal.day" :month="deal.month" :event="deal.event" :address="deal.address" @click="addToCart()" />  
                 </div>
             </div>
             <div class="img-part">

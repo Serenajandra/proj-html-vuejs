@@ -1,4 +1,6 @@
 <script>
+import { store } from "../../store";
+import PizzaDeals from "./PizzaDeals.vue";
 export default{
     name:"PizzaMenu",
     props: {
@@ -7,6 +9,11 @@ export default{
         price: String,
         untilSalePrice: String,
         sold: Boolean 
+    },
+    data(){
+        return{
+            store
+        }
     },
     methods:{
         getImageUrl(url) {
