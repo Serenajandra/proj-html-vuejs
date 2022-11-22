@@ -15,7 +15,7 @@ export default{
     <div class="container">
         <div class="testimonials">
             <div class="card">
-                <img src="" alt="">
+                <i class="fa-solid fa-quote-left fa-4x"></i>
                 <h3>"Forget the trandy pizza shops, this hidden spot makes the best newyork-style pizza slice in Naples"</h3>
                 <p>Washington Post 2018</p>
             </div>
@@ -53,6 +53,10 @@ export default{
                 p{
                     color: red;
                     font-size: 0.6rem;
+                }
+                i{
+                    color: $dark-gold;
+                    padding-bottom: 2rem;
                 }
             }
         }

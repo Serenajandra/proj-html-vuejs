@@ -15,9 +15,11 @@ export default{
 </script>
 <template>
     <div class="card">
-        <img :src="getImageUrl(`../../assets/img/h3-product-img-${image}.png`)" alt="">
-        <p class="name">{{name}}</p>
-        <p class="price">{{price}}</p>
+        <a href="">
+            <img :src="getImageUrl(`../../assets/img/h3-product-img-${image}.png`)" alt="">
+            <p class="name">{{name}}</p>
+            <p class="price">{{price}}</p>
+        </a>
     </div>
 </template>
 <style lang="scss" scoped>

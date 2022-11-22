@@ -109,14 +109,15 @@ export default{
 </script>
 
 <template>
-
     <div>
-        <section class="jumbotron">
+        <section>
             <JumbotronSec />
         </section>
+
         <div class="fixed-icon">
             <img src="../assets/svg/svg-4.svg" alt="">
         </div>
+        
         <section>
             <div class="container">
                 <div class="row d-flex">
@@ -125,9 +126,18 @@ export default{
             </div>
         </section>
 
-        <TestimonialsSection />
-        <FiftyImgFiftyTextSec />
-        <GoAhead />
+        <section>
+            <TestimonialsSection />
+        </section> 
+
+        <section>
+            <FiftyImgFiftyTextSec />
+        </section>
+
+        <section>
+            <GoAhead />
+        </section>
+        
         <section>
             <div class="container">
                 <div class="row d-flex">
@@ -186,7 +196,6 @@ export default{
             <BookTable />
         </section>
     
-    
     </div>
     
 </template>
@@ -202,7 +211,6 @@ export default{
     background-color: $light;
     border-radius: 50%;
     padding: 0.25rem 0.5rem;
- 
 }
 
 .container{
@@ -247,6 +255,7 @@ export default{
         }
     }
 }
+
 .pizza-deals{
     display: flex;
     width: 100%;
@@ -265,6 +274,7 @@ export default{
             margin-top: 5rem;
         }
     }
+
     h6{
         color: $red-light;
         text-transform: uppercase;
