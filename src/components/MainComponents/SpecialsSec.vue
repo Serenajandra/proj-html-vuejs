@@ -1,7 +1,7 @@
 <script>
 import { store } from "../../store";
 export default{
-    name:"FiftyImgFiftyTextCard",
+    name:"SpecialsSec",
     data(){
         return{
             store,
@@ -16,7 +16,7 @@ export default{
         </div>
         <div class="text-part">
             <div class="text-container">
-                <h3>Specials*</h3>
+                <h3 class="title">Specials*</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla magni autem beatae vel at perferendis</p>
                 <div class=" menu d-flex" v-for="(special, index) in store.specialsList" :key="index">
                     <h4 class="price">{{special.price}}</h4>
@@ -31,6 +31,8 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+@use"../../styles/variabiles.scss" as*;
+
     section{
         width: 100%;
         padding-bottom: 0.3rem;
@@ -59,13 +61,14 @@ export default{
                 left: 50%;
                 transform: translate(-50%,-50%);
             
-                h3{
+                .title{
                     text-transform: uppercase;
                     margin-bottom: 0.5rem;
+                    font-size: 2rem;
                 }
                 p{
                     margin-bottom: 2rem;
-                    color: grey;
+                    color:$dark-grey;
                 }
                 h4{
                     margin-bottom: .6rem;

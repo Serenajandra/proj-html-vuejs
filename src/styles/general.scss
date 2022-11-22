@@ -1,5 +1,6 @@
 @use "./variabiles" as*;
 @import "node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+@import "node_modules/@fontsource/oswald/index.css";
 
 
 *{
@@ -12,9 +13,13 @@ img{
     max-width: 100%;
 }
 
+body { 
+    font-family: "Oswald", sans-serif; 
+    letter-spacing: 0.08rem;
+}
+
 html{
     font-size: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 // UTILITIES

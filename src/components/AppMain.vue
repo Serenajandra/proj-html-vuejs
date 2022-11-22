@@ -2,13 +2,13 @@
 import JumbotronSec from './MainComponents/JumbotronSec.vue';
 import BookTable from './MainComponents/BookTable.vue';
 import CrewInfo from './MainComponents/CrewInfo.vue';
-import FiftyImgFiftyTextSec from './MainComponents/FiftyImgFiftyTextSec.vue';
 import GoAhead from './MainComponents/GoAhead.vue';
 import ClientSec from './MainComponents/ClientSec.vue';
 import TestimonialsSection from './MainComponents/TestimonialsSection.vue';
 import PizzaMenu from './MainComponents/PizzaMenu.vue';
 import PizzaDeals from './MainComponents/PizzaDeals.vue';
 import AdvertisingSec from './MainComponents/AdvertisingSec.vue';
+import SpecialsSec from './MainComponents/SpecialsSec.vue';
 
 export default{
     name: "AppMain",
@@ -16,7 +16,6 @@ export default{
     components: {
     TestimonialsSection,
     GoAhead,
-    FiftyImgFiftyTextSec,
     CrewInfo,
     ClientSec,
     PizzaMenu,
@@ -24,7 +23,8 @@ export default{
     BookTable,
     AdvertisingSec,
     JumbotronSec,
-    },
+    SpecialsSec
+},
     data(){
         return{
             Advertising : ["h3-img-1","h3-img-2","h3-img-3","h3-img-4"],
@@ -131,7 +131,7 @@ export default{
         </section> 
 
         <section>
-            <FiftyImgFiftyTextSec />
+            <SpecialsSec />
         </section>
 
         <section>
