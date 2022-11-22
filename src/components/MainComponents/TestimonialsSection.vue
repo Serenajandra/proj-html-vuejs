@@ -8,24 +8,29 @@ export default{
             testimonials: [
                 {
                     text:"Forget the trandy pizza shops, this hidden spot makes the best newyork-style pizza slice in Naples.",
-                    author: "Washington Post 2018"
+                    author: "Washington Post 2018",
+                    point: ""
                 },
                 {
                     text: "Friendliness, dedication and competence are the hallmarks of all staff. An excellent pizza to eat with friends to live an experience not only culinary but able to involve all our senses.",
-                    author: "The Sunday 2019"
+                    author: "The Sunday 2019",
+                    point: ""
                 },
                 {
                     text: "An extraordinary dive into the 50s, where cuisine and style come together in a unique experience that will leave you dreamy and a little nostalgic.",
-                    author: "The New York Times 2020"
+                    author: "The New York Times 2020",
+                    point: ""
                 }
             ],
-            review: 0
+            review: 0,
+            
         }
     },
     methods: {
         showNext(){
             if (this.review < this.testimonials.length - 1) {
                 this.review++;
+
             }else{
                 this.review = 0;
             }
@@ -48,7 +53,13 @@ export default{
                 <i class="fa-solid fa-quote-left fa-4x"></i>
                 <h3>{{testimonials[review].text}}</h3>
                 <p>{{testimonials[review].author}}</p>
+                <div class="d-flex">
+                    <div class="golden-point"></div>
+                    <div class="golden-point"></div>
+                    <div class="golden-point"></div>
+                </div>
             </div>
+
         </div>
         <div class="btn-wrapper">
             <a class="next" @click="showNext()" >next</a>
@@ -88,7 +99,17 @@ export default{
                     color: $dark-gold;
                     padding-bottom: 2rem;
                 }
+                .golden-point{
+                    border-radius: 50%;
+                    width: 8px;
+                    height:8px;
+                    margin: 2px;
+                    background-color: white;
+                }
             }
+        }
+        .active{
+            background-color: $dark-gold;
         }
         .btn-wrapper{
             .next , .prev{

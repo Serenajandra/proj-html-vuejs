@@ -109,7 +109,7 @@ export default{
 </script>
 
 <template>
-    <div>
+    <div class="main-container">
         <section>
             <JumbotronSec />
         </section>
@@ -203,104 +203,107 @@ export default{
 <style lang="scss" scoped>
 @use "../styles/variabiles" as*;
 
-.fixed-icon{
-    right: 1rem;
-    bottom: 50%;
-    z-index: 999;
-    position: fixed;
-    background-color: $light;
-    border-radius: 50%;
-    padding: 0.25rem 0.5rem;
-}
-
-.container{
-    width: 100%;
-    padding: 0.5rem 0;
-    .row{
-        width: 100%;
-    }
-    .clientLogoList{
-        display: flex;
-        justify-content: center;
-        width: 70%;
-    }
-
-}
-.pizzas-container{
-    width: 100%;
-
-    .pizzas-list{
-        padding: 4rem 0; 
+    .main-container{
         overflow: hidden;
-    }
-    .text-part{
-        padding: 2rem;
-        line-height: 2rem;
-        h6{
-            color:$red-light;
-            text-transform: uppercase;
-        }
-        h2{
-            text-transform: uppercase;
-            padding-bottom: 1rem;
-        }
-        p{
-            color: $dark-grey;
-            width: 60%;
-            line-height: 1.5rem;
-        }
-        .title{
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-    }
-}
 
-.pizza-deals{
-    display: flex;
-    width: 100%;
-    padding-bottom: 0.3rem;
-    position: relative;
-    .img-part{
-        width: 50%;
-    }
-    .pizza-deals-text{
-        background-color: $bg-dark;
-        width: 50%;
-        max-height: 100%;
-        color: $light;
-        .text-container{
-            width: 60%;
-            margin-top: 5rem;
-        }
-    }
-
-    h6{
-        color: $red-light;
-        text-transform: uppercase;
-        margin-bottom: 0.5rem;
-    }
-    h3{
-        padding-bottom: 1rem;
-        font-size: 2rem;
-        text-transform: uppercase;
-    }
-    .cart-logo-container{
-        position: absolute;
+        .fixed-icon{
             right: 1rem;
-            top: -2rem;
+            bottom: 50%;
+            z-index: 999;
+            position: fixed;
             background-color: $light;
-        .circle-logo{
-            margin-bottom: 0.2rem;
-            background-color: $red-light;
+            border-radius: 50%;
+            padding: 0.25rem 0.5rem;
         }
-        .cart-logo , .circle-logo{
-            width: 2rem;
-            height: 2rem;
-            padding: 0.5rem; 
-                       
+
+        .container{
+            width: 100%;
+            padding: 0.5rem 0;
+            .row{
+                width: 100%;
+            }
+            .clientLogoList{
+                display: flex;
+                justify-content: center;
+                width: 70%;
+            }
+        
+        }
+        .pizzas-container{
+            width: 100%;
+            .pizzas-list{
+                padding: 4rem 0;
+                width: 1250px; 
+            
+            }
+            .text-part{
+                padding: 2rem;
+                line-height: 2rem;
+                h6{
+                    color:$red-light;
+                    text-transform: uppercase;
+                }
+                h2{
+                    text-transform: uppercase;
+                    padding-bottom: 1rem;
+                }
+                p{
+                    color: $dark-grey;
+                    width: 60%;
+                    line-height: 1.5rem;
+                }
+                .title{
+                    font-size: 2rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .pizza-deals{
+            display: flex;
+            width: 100%;
+            padding-bottom: 0.3rem;
+            position: relative;
+            .img-part{
+                width: 50%;
+            }
+            .pizza-deals-text{
+                background-color: $bg-dark;
+                width: 50%;
+                max-height: 100%;
+                color: $light;
+                .text-container{
+                    width: 60%;
+                    margin-top: 5rem;
+                }
+            }
+        
+            h6{
+                color: $red-light;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+            }
+            h3{
+                padding-bottom: 1rem;
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+            .cart-logo-container{
+                position: absolute;
+                    right: 1rem;
+                    top: -2rem;
+                    background-color: $light;
+                .circle-logo{
+                    margin-bottom: 0.2rem;
+                    background-color: $red-light;
+                }
+                .cart-logo , .circle-logo{
+                    width: 2rem;
+                    height: 2rem;
+                    padding: 0.5rem; 
+
+                }
+            }
         }
     }
-}
-
 </style>

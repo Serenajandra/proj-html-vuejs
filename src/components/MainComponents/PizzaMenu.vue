@@ -26,9 +26,9 @@ export default{
 @use "../../styles/variabiles" as*;
 .card{
     padding: 0 50px;
-    width: 100%;
+    
     img{
-        width: 200px;
+        width: 400px !important;
     }
     .name{
         color:$gold;
