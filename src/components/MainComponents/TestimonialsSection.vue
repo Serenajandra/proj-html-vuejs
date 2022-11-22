@@ -42,7 +42,7 @@ export default{
             }else{
                 this.review = this.testimonials.length - 1;
             }
-        }
+        },
     }
 }
 </script>

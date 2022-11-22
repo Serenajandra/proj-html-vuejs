@@ -4,7 +4,8 @@ export default{
     props: {
         image: String,
         name: String,
-        price: String
+        price: String,
+        sold: Boolean 
     },
     methods:{
         getImageUrl(url) {
@@ -19,7 +20,11 @@ export default{
             <img :src="getImageUrl(`../../assets/img/h3-product-img-${image}.png`)" alt="">
             <p class="name">{{name}}</p>
             <p class="price">{{price}}</p>
+            <div class="sold" :class="sold === true ? `active` : `` ">
+                <p>sold</p>
+            </div>
         </a>
+        
     </div>
 </template>
 <style lang="scss" scoped>
@@ -27,6 +32,7 @@ export default{
 .card{
     margin: 3rem;
     padding: auto;
+    position: relative;
     
     img{
         width: 400px !important;
@@ -36,6 +42,22 @@ export default{
     }
     .price{
         color: $red-light;
+    }
+    .sold{
+        border-radius: 50%;
+        background-color: $red-light;
+        color: $light;
+        padding: 0.7rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+    }
+    .active{
+        display: inline-block;
     }
 
 }
